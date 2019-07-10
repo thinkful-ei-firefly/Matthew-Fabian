@@ -12,8 +12,18 @@ console.log(obj);
 	return 
 });*/
 
-function modifyObject(obj){
-	return {...obj, foo:'foo', bar:'bar', bizz:'bizz', bang:'bang'};
+function modifyObject(obj) {
+  return { ...obj, foo: "foo", bar: "bar", bizz: "bizz", bang: "bang" };
 }
 
 console.log(modifyObject(obj));
+
+const personMaker = () => ({
+  firstName: "Paul",
+  lastName: "Jones",
+  fullName() {
+    return `my full name is ${this.firstName} ${this.lastName}`;
+  }
+});
+
+const person1 = personMaker();
